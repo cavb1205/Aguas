@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Clientes
+{% endblock %}
+
+{% block titulo %}
+	<h1>Lista de Clientes:</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+	<p><a href="">Agregar Cliente</a></p>
+	
+	{% for cliente in object_list %}
+		<p>Cliente: {{cliente.nombre}}    |   Dirección:{{cliente.direccion}}    |	Celular: {{cliente.celular}}</p>
+	{% endfor %}
+
+
+{% endblock %}

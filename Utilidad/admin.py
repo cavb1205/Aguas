@@ -2,5 +2,9 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from .models import Utilidad 
 
-# Register your models here.
+@admin.register(Utilidad)
+class UtilidadAdmin(admin.ModelAdmin):
+	list_display = ('fecha', 'descripcion')
+
