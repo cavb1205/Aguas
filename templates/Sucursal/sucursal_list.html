@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h1>Sucursales:</h1>
+{% endblock %}
+
+{% block contenido %}
+<p><a href="{% url 'sucursal:nuevo' %}">Agregar Sucursal</a></p>
+<ul>
+	{% for sucursal in object_list %}
+		<li><a href="{% url 'sucursal:detalle' pk=sucursal.id %}">{{sucursal.nombre}}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}
+
+

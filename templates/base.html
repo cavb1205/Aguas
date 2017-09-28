@@ -8,6 +8,17 @@
 	{% block titulo %}
 	{% endblock %}
 
+
+<p>-------------------------------------------------------------------------------------------------</p>
+	<ul>
+		<li><a href="{% url 'inicio' %}">Inicio</a></li>
+		<li><a href="{% url 'sucursal:lista' %}">Sucursales</a></li>
+		<li><a href="{% url 'clientes:lista' %}">Clientes</a></li>
+
+	</ul>
+
+<p>-------------------------------------------------------------------------------------------------</p>
+
 	{% block contenido %}
 	{% endblock %}
 </body>

@@ -6,7 +6,7 @@ from .models import Gasto, Tipo_Gasto
 # Register your models here.
 @admin.register(Gasto)
 class GastoAdmin(admin.ModelAdmin):
-	list_display = ('gasto', 'fecha', 'descripcion')
+	list_display = ('gasto', 'fecha', 'descripcion','valor')
 
 @admin.register(Tipo_Gasto)
 class Tipo_GastoAdmin(admin.ModelAdmin):

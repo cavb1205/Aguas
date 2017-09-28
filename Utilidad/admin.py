@@ -6,5 +6,5 @@ from .models import Utilidad
 
 @admin.register(Utilidad)
 class UtilidadAdmin(admin.ModelAdmin):
-	list_display = ('fecha', 'descripcion')
+	list_display = ('fecha', 'descripcion','valor')
 

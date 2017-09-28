@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+	<h1>Sucursal: {{sucursal.nombre}}</h1>
+{% endblock %}
+
+{% block contenido %}
+	<p>RUT: {{sucursal.rut}}</p>
+	<p>Direccion: {{sucursal.direccion}}</p>
+	<p>Responsable: {{sucursal.representante.first_name}}</p>
+	<p>Saldo en Caja: {{sucursal.caja}}</p>
+	<p><a href="{% url 'sucursal:lista' %}">Regresar</a></p>
+{% endblock %}
