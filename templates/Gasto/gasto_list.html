@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Gastos
+{% endblock %}
+
+{% block titulo %}
+	<h1>Lista de Gastos:</h1>
+{% endblock %}
+
+
+{% block contenido %}
+	
+	
+	<p><a href="{% url 'gasto:nuevo' %}">Agregar Gasto</a></p>
+	
+	{% for gasto in object_list %}
+		<p><a href="{% url 'gasto:detalle' pk=gasto.id %}">{{gasto.id}}</a>	|	{{gasto.fecha}}    |   Descripción:{{gasto.descripcion}}    |	Valor: {{gasto.valor}}</p>
+	{% endfor %}
+	
+	
+
+{% endblock %}

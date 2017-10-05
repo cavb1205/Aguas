@@ -1,0 +1,4 @@
+<form method="post">{% csrf_token %}
+    <p>¿Estás seguro que deseas borrar el gasto "ID: {{gasto.id}} - {{ gasto.gasto }}"?</p>
+    <input type="submit" value="Submit" />
+</form>

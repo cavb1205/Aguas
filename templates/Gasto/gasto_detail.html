@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+	<h1>Gasto # {{gasto.id}}</h1>
+{% endblock %}
+
+{% block contenido %}
+	<p>Fecha: {{gasto.fecha}}</p>
+	<p>Gasto: {{gasto.gasto}}</p>
+	<p>Descripción: {{gasto.descripcion}}</p>
+	<p>Valor: {{gasto.valor}}</p>
+	<p><a href="{% url 'gasto:lista' %}">Regresar</a> <a href="{% url 'gasto:editar' pk=gasto.id %}">Editar</a> <a href="{% url 'gasto:eliminar' pk=gasto.id %}">Eliminar</a></p>
+{% endblock %}

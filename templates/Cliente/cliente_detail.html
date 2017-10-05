@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+	<h1>Cliente # {{cliente.id}}</h1>
+{% endblock %}
+
+{% block contenido %}
+	<p>Nombres: {{cliente.nombre}}</p>
+	<p>Dirección: {{cliente.direccion}}</p>
+	{% if cliente.telefono %}
+		<p>Telefono: {{cliente.telefono}}</p>
+	{% endif %}
+	<p>Celular: {{cliente.celular}}</p>
+	<p>Correo: {{cliente.email}}</p>
+	<p><a href="{% url 'clientes:lista' %}">Regresar</a> <a href="{% url 'clientes:editar' pk=cliente.id %}">Editar</a> <a href="{% url 'clientes:eliminar' pk=cliente.id %}">Eliminar</a></p>
+{% endblock %}

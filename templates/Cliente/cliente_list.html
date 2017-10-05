@@ -12,11 +12,12 @@
 {% block contenido %}
 	
 	
-	<p><a href="">Agregar Cliente</a></p>
+	<p><a href="{% url 'clientes:nuevo' %}">Agregar Cliente</a></p>
 	
 	{% for cliente in object_list %}
-		<p>Cliente: {{cliente.nombre}}    |   Dirección:{{cliente.direccion}}    |	Celular: {{cliente.celular}}</p>
+		<p><a href="{% url 'clientes:detalle' pk=cliente.id %}">{{cliente.id}}</a>	|	{{cliente.nombre}}    |   Dirección:{{cliente.direccion}}    |	Celular: {{cliente.celular}}</p>
 	{% endfor %}
-
+	
+	
 
 {% endblock %}
